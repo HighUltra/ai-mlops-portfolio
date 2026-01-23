@@ -13,3 +13,10 @@
 ## Progreso del Proyecto
 - [x] **Fase 0:** Setup del entorno (Python, Conda, Docker).
 - [ ] **Fase 1:** Fundamentos de Python para Datos.
+                - [x] 1.3 Transformaciones y agregaciones.
+                  - ##Insights: 1. Los clientes que abandonan la empresa (Churn) llaman en promedio 2.2 veces a soporte, comparado con 1.4 veces de los clientes  leales.
+                  - 2. El gasto promedio de los clientes que se van es mayor ($65 vs $58).
+                
+                - [x] 1.4 Operaciones avanzadas y automatización (Script ETL)
+                  - Implementación de `scripts/etl.py` para procesamiento por línea de comandos.
+                  - Uso de operaciones vectorizadas para optimizar el rendimiento.
