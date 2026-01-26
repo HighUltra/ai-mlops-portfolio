@@ -20,3 +20,9 @@
                 - [x] 1.4 Operaciones avanzadas y automatización (Script ETL)
                   - Implementación de `scripts/etl.py` para procesamiento por línea de comandos.
                   - Uso de operaciones vectorizadas para optimizar el rendimiento.
+        
+        - Habilidades Técnicas Demostradas:
+        
+        - Limpieza de datos con Pandas.
+        - Automatización mediante scripts ETL.
+        - Análisis de bases de datos relacionales con SQLite y SQL Avanzado.
