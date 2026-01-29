@@ -12,7 +12,7 @@
 ---
 ## Progreso del Proyecto
 - [x] **Fase 0:** Setup del entorno (Python, Conda, Docker).
-- [ ] **Fase 1:** Fundamentos de Python para Datos.
+- [x] **Fase 1:** Fundamentos de Python para Datos.
                 - [x] 1.3 Transformaciones y agregaciones.
                   - ##Insights: 1. Los clientes que abandonan la empresa (Churn) llaman en promedio 2.2 veces a soporte, comparado con 1.4 veces de los clientes  leales.
                   - 2. El gasto promedio de los clientes que se van es mayor ($65 vs $58).
@@ -26,3 +26,19 @@
         - Limpieza de datos con Pandas.
         - Automatización mediante scripts ETL.
         - Análisis de bases de datos relacionales con SQLite y SQL Avanzado.
+
+- [x] Fase 1.6: Machine Learning Baseline.
+    - Implementación de `Random Forest` con balanceo de clases.
+    - Métricas obtenidas: **95% Accuracy** y **78.2% F1-Score** (promedio en CrossValidation/ CV).
+    - Exportación de artefactos: Modelo y Escalador guardados en `/models` para despliegue.
+
+  - ### 📈 Comparativa de Modelos
+  - 
+En esta fase evaluamos dos aproximaciones para establecer nuestra línea base (baseline):
+
+| Modelo |                 Accuracy | Recall (Clase: Fuga) | F1-Score | Notas                                          |
+ **Logistic Regression** | 86%      | 21%                  | 31%      | Muy débil detectando fugas reales.             |
+ **Random Forest**       | **95%**  | **67%**              | **80%**  | **Modelo elegido.** Alta precisión y robustez. |
+
+> **Insight:** El cambio a Random Forest junto con el balanceo de clases permitió triplicar la capacidad del modelo para identificar clientes en riesgo de abandono comparado con el anterior modelo utilizado de regresion logistica.
+              
