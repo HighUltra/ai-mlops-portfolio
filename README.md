@@ -42,10 +42,17 @@ En esta fase evaluamos dos aproximaciones para establecer nuestra línea base (b
 
 > **Insight:** El cambio a Random Forest junto con el balanceo de clases permitió triplicar la capacidad del modelo para identificar clientes en riesgo de abandono comparado con el anterior modelo utilizado de regresion logistica.
 
-> ### 🔧 Fase 2.2: Optimización de Hyperparámetros
+> ### 🔧 Fase 1.6.1: Optimización de Hyperparámetros
 Se utilizó `GridSearchCV` para encontrar la configuración óptima del bosque, logrando reducir el sobreajuste (overfitting).
 
 - **Mejor Configuración:** `max_depth: 10`, `n_estimators: 200`.
 - **Resultado Final (F1-Score):** **83.71%** (Mejora del ~5% sobre el baseline).
 - **Estado:** Modelo listo para la fase de MLOps y Despliegue.
+- 
+- [x] **Fase 1.7: Automatización y Cierre de Fase**
+    - [x] Creación de `scripts/run_train.py` para entrenamiento reproducible.
+    - [x] Implementación de **SMOTE** para balanceo de clases.
+    - [x] Generación de `requirements.txt` para portabilidad.
+    - [x] **Métrica Final:** F1-Score del **82%** (Logrando un Recall del 83% en fugas).
+    - [x] Artefactos exportados: `model_v1.joblib` y `scaler_v1.joblib`.
               
