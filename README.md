@@ -55,4 +55,9 @@ Se utilizó `GridSearchCV` para encontrar la configuración óptima del bosque, 
     - [x] Generación de `requirements.txt` para portabilidad.
     - [x] **Métrica Final:** F1-Score del **82%** (Logrando un Recall del 83% en fugas).
     - [x] Artefactos exportados: `model_v1.joblib` y `scaler_v1.joblib`.
+
+- [x] **Fase 2: Transformers Intro**
+    - Implementación de Pipeline de Sentimiento con `distilbert-base-uncased`.
+    - Tiempo de inferencia detectado: **~0.039s** (Inferencia en CPU).
+    - Pruebas exitosas detectando polaridad en frases de prueba.
               
