@@ -60,4 +60,15 @@ Se utilizó `GridSearchCV` para encontrar la configuración óptima del bosque, 
     - Implementación de Pipeline de Sentimiento con `distilbert-base-uncased`.
     - Tiempo de inferencia detectado: **~0.039s** (Inferencia en CPU).
     - Pruebas exitosas detectando polaridad en frases de prueba.
+
+-- [x] **Fase 2.3: Embeddings y Almacenamiento**
+    - Generación de embeddings densos (384 dimensiones) usando `all-MiniLM-L6-v2`.
+    - Procesamiento de un lote de 100 documentos sintéticos de quejas de clientes.
+    - Almacenamiento persistente de vectores en formato `.npy` y metadatos en `.parquet`.
+
+- [x] **Fase 2.4: Vector Database (ChromaDB)**
+    - Implementación de base de datos vectorial local con **ChromaDB**.
+    - Indexación exitosa de 100 vectores con sus respectivos IDs y documentos.
+    - **Métrica de Latencia de Búsqueda:** **0.045s** (Búsqueda semántica top-3).
+    - Capacidad de recuperación demostrada: El sistema identifica "internet speed" como concepto relacionado a "slow connection". 
               
