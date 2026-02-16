@@ -61,7 +61,7 @@ Se utilizó `GridSearchCV` para encontrar la configuración óptima del bosque, 
     - Tiempo de inferencia detectado: **~0.039s** (Inferencia en CPU).
     - Pruebas exitosas detectando polaridad en frases de prueba.
 
--- [x] **Fase 2.3: Embeddings y Almacenamiento**
+- [x] **Fase 2.3: Embeddings y Almacenamiento**
     - Generación de embeddings densos (384 dimensiones) usando `all-MiniLM-L6-v2`.
     - Procesamiento de un lote de 100 documentos sintéticos de quejas de clientes.
     - Almacenamiento persistente de vectores en formato `.npy` y metadatos en `.parquet`.
@@ -71,4 +71,16 @@ Se utilizó `GridSearchCV` para encontrar la configuración óptima del bosque, 
     - Indexación exitosa de 100 vectores con sus respectivos IDs y documentos.
     - **Métrica de Latencia de Búsqueda:** **0.045s** (Búsqueda semántica top-3).
     - Capacidad de recuperación demostrada: El sistema identifica "internet speed" como concepto relacionado a "slow connection". 
+  
+- [x] **Fase 2.5: RAG Simple (Pipeline Completo)**
+    - Implementación de arquitectura **Retrieval-Augmented Generation**.
+    - Integración de **ChromaDB** como recuperador de contexto y **Flan-T5** como generador de respuestas.
+    - Creación de `scripts/rag_service.py`: Un servicio modular y portable que utiliza rutas absolutas para mayor robustez.
+    - **Resultado:** El sistema es capaz de responder preguntas sobre problemas técnicos basándose exclusivamente en el contexto recuperado (evitando alucinaciones básicas).
+
+---
+## 🛠️ Tecnologías Fase 2
+* **Modelos:** `sentence-transformers` (Embeddings), `Flan-T5-Small` (Generación).
+* **Vector DB:** ChromaDB (Local Persistence).
+* **Lógica:** Python orientado a objetos para el servicio RAG.
               
