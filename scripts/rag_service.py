@@ -32,9 +32,19 @@ class RAGSystem:
         query_vector = self.embed_model.encode([question])[0].tolist()
         results = self.collection.query(query_embeddings=[query_vector], n_results=k)
         context = " ".join(results['documents'][0])
+        
+      # 2. Prompt
+        prompt = f"""
+        Answer the following question using ONLY the provided context. 
+        If the answer is not in the context, say "I don't know".
+        Keep the answer short but use complete sentences. Do not return IDs.
 
-        # 2. Prompt
-        prompt = f"Context: {context}\nQuestion: {question}\nAnswer:"
+        Context: 
+        {context}
+
+        Question: {question}
+        Helpful Answer:"""
+        
 
         # 3. Inference
         inputs = self.tokenizer(prompt, return_tensors="pt")
