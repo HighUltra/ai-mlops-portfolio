@@ -22,6 +22,10 @@ try:
 except Exception as e:
     print(f"❌ Error crítico cargando RAG: {e}")
     rag = None
+    
+@app.get("/")
+def home():
+    return {"message": "AI Support API is Online", "status": "Ready"}
 
 @app.get("/ask", response_model=RAGResponse, tags=["IA Engine"])
 def ask_ai(question: str = Query(..., min_length=3, description="Tu pregunta técnica")):
