@@ -1,0 +1,51 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Entornos (Conda/Venv) ---
+.conda/
+data-env/
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints
+
+# --- MLflow & Experiment Tracking ---
+# Ignoramos la base de datos de experimentos porque puede pesar GBs
+mlruns/
+mlartifacts/
+
+# --- Datos y Modelos (LO MÁS IMPORTANTE) ---
+# Ignoramos datasets y modelos pesados (.joblib, .pkl, .csv, .sqlite)
+datasets/*.csv
+datasets/*.json
+outputs/*.csv
+outputs/*.sqlite3
+models/*.joblib
+models/*.pkl
+chroma_db/
+*.sqlite3
+
+# --- Docker ---
+.docker/
+
+# --- Sistema ---
+.DS_Store
+Thumbs.db
