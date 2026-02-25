@@ -34,12 +34,11 @@ mlartifacts/
 
 # --- Datos y Modelos (LO MÁS IMPORTANTE) ---
 # Ignoramos datasets y modelos pesados (.joblib, .pkl, .csv, .sqlite)
-datasets/*.csv
-datasets/*.json
-outputs/*.csv
-outputs/*.sqlite3
-models/*.joblib
-models/*.pkl
+datasets/
+outputs/
+models/
+mlartifacts/
+mlruns/
 chroma_db/
 *.sqlite3
 
@@ -47,5 +46,7 @@ chroma_db/
 .docker/
 
 # --- Sistema ---
+mlflow.db
+*.db
 .DS_Store
 Thumbs.db
